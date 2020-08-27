@@ -1,10 +1,10 @@
 import React from 'react';
 
-import CoreSkillsItem from './core_skills_item'
+import CoreSkillsItem from './core_skills_list_item'
 
 const CoreSkills = () => {
     return (
-        <ul>
+        <ul className="app-list list-group">
             <CoreSkillsItem/>
             <CoreSkillsItem/>
             <CoreSkillsItem/>

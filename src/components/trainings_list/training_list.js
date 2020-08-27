@@ -4,7 +4,7 @@ import TrainingListItem from "./training_list_item";
 
 const TrainingList = () => {
     return (
-        <ul>
+        <ul className="app-list list-group">
             <TrainingListItem/>
             <TrainingListItem/>
             <TrainingListItem/>
