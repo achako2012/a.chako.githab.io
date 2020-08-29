@@ -2,15 +2,13 @@ import React from "react";
 
 import './work_list_item.css'
 
-const WorkListItem = () => {
+const WorkListItem = ({label}) => {
     return (
-        <li className="list-group-item">
             <div className="app-list-item d-flex justify-content-between">
                 <span className="app-list-item-label">
-                    work experience!
+                   {label}
                 </span>
             </div>
-        </li>
     )
 }
 

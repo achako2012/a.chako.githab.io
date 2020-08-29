@@ -1,11 +1,17 @@
 import React from 'react';
 
+import './objective.css'
 
 const Objective = () => {
     return(
-        <h1>
-            Objective here!
-        </h1>
+        <div>
+            <h1 className="app-list">
+                Objective here!
+            </h1>
+            <p>
+                стремлюсь создать самые лучшие гойдалки для папужей
+            </p>
+        </div>
     )
 }
 

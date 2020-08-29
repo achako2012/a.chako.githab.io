@@ -1,14 +1,12 @@
 import React from "react";
 
-const TrainingListItem = () => {
+const TrainingListItem = ({label}) => {
     return (
-        <li className="list-group-item">
             <div className="app-list-item d-flex justify-content-between">
                 <span className="app-list-item-label">
-                    Training
+                    {label}
                 </span>
             </div>
-        </li>
     )
 }
 

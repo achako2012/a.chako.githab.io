@@ -1,10 +1,12 @@
 import React from 'react'
 
+import './languages.css'
+
 const Languages = () => {
     return (
-        <h2>
+        <h1 className='app-list'>
             Some languages here
-        </h2>
+        </h1>
     )
 }
 

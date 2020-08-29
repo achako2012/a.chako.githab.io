@@ -11,14 +11,33 @@ import Languages from "../languages";
 import './app.css'
 
 const App = () => {
+
+    const core = [
+        {label:'Papuzh pauk'},
+        {label:'Love with Bigdinka'},
+        {label:'Budgies love me!'}
+    ]
+
+    const training = [
+        {label:'How feed papuzka'},
+        {label:'Delaniya smakolochkiv'}
+    ]
+
+    const work = [
+        {label:'work with bigdinka'},
+        {label:'work in Terrasoft'}
+    ]
+
+
+
     return (
         <div className="app">
             <AppHeader/>
             <Objective/>
-            <CoreSkills/>
-            <TrainingList/>
+            <CoreSkills posts={core}/>
+            <TrainingList posts={training}/>
             <Education/>
-            <WorkList/>
+            <WorkList posts={work}/>
             <Interests/>
             <Languages/>
         </div>

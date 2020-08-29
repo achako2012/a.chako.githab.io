@@ -1,14 +1,12 @@
 import React from "react";
 
-const CoreSkillsItem = () => {
+const CoreSkillsItem = ({label}) => {
     return (
-        <li className="list-group-item">
             <div className="app-list-item d-flex justify-content-between">
                 <span className="app-list-item-label">
-                    core skill
+                    {label}
                 </span>
             </div>
-        </li>
     )
 }
 
