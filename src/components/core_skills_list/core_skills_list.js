@@ -5,10 +5,10 @@ import CoreSkillsItem from './core_skills_list_item'
 const CoreSkills = ({posts}) => {
 
     const elements = posts.map((item) => {
+        const {id,...label} = item
         return(
-            <li className="list-group-item">
-                <CoreSkillsItem
-                    label={item.label}/>
+            <li key={id} className="list-group-item">
+                <CoreSkillsItem {...label}/>
             </li>
         )
     })

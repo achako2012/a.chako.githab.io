@@ -13,19 +13,19 @@ import './app.css'
 const App = () => {
 
     const core = [
-        {label:'Papuzh pauk'},
-        {label:'Love with Bigdinka'},
-        {label:'Budgies love me!'}
+        {label:'Papuzh pauk', id:'123sqas'},
+        {label:'Love with Bigdinka', id:'mbnj121'},
+        {label:'Budgies love me!', id:'hjh56212s'}
     ]
 
     const training = [
-        {label:'How feed papuzka'},
-        {label:'Delaniya smakolochkiv'}
+        {label:'How feed papuzka', id:'gjy12jyu'},
+        {label:'Delaniya smakolochkiv', id:'fgh54h'}
     ]
 
     const work = [
-        {label:'work with bigdinka'},
-        {label:'work in Terrasoft'}
+        {label:'work with bigdinka', id:'gfh4456'},
+        {label:'work in Terrasoft', id:'fh4hf45'}
     ]
 
 

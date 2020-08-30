@@ -5,10 +5,10 @@ import TrainingListItem from "./training_list_item";
 const TrainingList = ({posts}) => {
 
     const elements = posts.map((item) => {
+        const {id, ...label} = item
         return(
-            <li className="list-group-item">
-                <TrainingListItem
-                    label={item.label}/>
+            <li key={id} className="list-group-item">
+                <TrainingListItem {...label} />
             </li>
         )
     })
