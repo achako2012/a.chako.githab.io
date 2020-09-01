@@ -22,15 +22,13 @@ export default class WorkList extends Component {
        this.cvService.getWork()
            .then(arr =>{
                this.setState({posts: arr})})
-
     }
 
     render() {
+        const {posts} = this.state
+        const elements = posts.map((item) => {
 
-        const arr = this.state.posts
-
-        const elements = arr.map((item) => {
-            const {id,...work} = item;
+            const {id, ...work} = item;
             return (
                 <li key={id} className="list-group-item">
                     <WorkListItem {...work}/>

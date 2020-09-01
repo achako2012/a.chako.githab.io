@@ -13,7 +13,11 @@ export default class CvService {
     }
 
     getWork() {
-        return this.getResource(`/message/`);
+        return this.getResource(`/work/`);
+    }
+
+    getSkills() {
+        return this.getResource(`/skills/`)
     }
 
 }
