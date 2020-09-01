@@ -24,18 +24,6 @@ const App = () => {
         {label:'Delaniya smakolochkiv', id:'fgh54h'}
     ]
 
-    const work = [
-        {label:'work with bigdinka', id:'gfh4456'},
-        {label:'work in Terrasoft', id:'fh4hf45'}
-    ]
-
-    console.log(work);
-
-    const cvService = new CvService()
-    cvService.getWork()
-        .then((res)=>{console.log(res)})
-
-
 
     return (
         <div className="app">
@@ -44,7 +32,7 @@ const App = () => {
             <CoreSkills posts={core}/>
             <TrainingList posts={training}/>
             <Education/>
-            <WorkList posts={work}/>
+            <WorkList/>
             <Interests/>
             <Languages/>
         </div>

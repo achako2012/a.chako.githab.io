@@ -1,31 +1,53 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import WorkListItem from './work_list_item'
 import './work_list.css'
+import CvService from "../../services/CvService";
 
-const WorkList = ({posts}) => {
 
-    const elements = posts.map((item) => {
-        const{id,...label}=item;
-        return(
-            <li key={id} className="list-group-item">
-                <WorkListItem {...label}/>
-            </li>
+
+export default class WorkList extends Component {
+
+    constructor(){
+        super();
+        this.updateWork()
+    }
+
+   cvService = new CvService()
+    state = {
+       posts:[]
+    }
+
+    updateWork(){
+       this.cvService.getWork()
+           .then(arr =>{
+               this.setState({posts: arr})})
+
+    }
+
+    render() {
+
+        const arr = this.state.posts
+
+        const elements = arr.map((item) => {
+            const {id,...work} = item;
+            return (
+                <li key={id} className="list-group-item">
+                    <WorkListItem {...work}/>
+                </li>
+            )
+        })
+
+        return (
+            <div>
+                <h1 className="app-list">
+                    Work Experience
+                </h1>
+                <ul className="list-group">
+                    {elements}
+                </ul>
+            </div>
         )
-    })
-
-
-    return (
-        <div>
-            <h1 className="app-list">
-                Work Experience
-            </h1>
-            <ul className="list-group">
-                {elements}
-            </ul>
-        </div>
-
-    )
+    }
 }
 
-export default WorkList

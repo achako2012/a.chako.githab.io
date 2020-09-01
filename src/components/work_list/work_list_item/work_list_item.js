@@ -1,15 +1,21 @@
-import React from "react";
+import React, {Component} from "react";
 
 import './work_list_item.css'
 
-const WorkListItem = ({label}) => {
-    return (
+export default class WorkListItem extends Component {
+    constructor(props) {
+        super(props)
+
+    }
+
+    render() {
+        const {work} = this.props
+        return (
             <div className="app-list-item d-flex justify-content-between">
                 <span className="app-list-item-label">
-                   {label}
+                    {work}
                 </span>
             </div>
-    )
+        )
+    }
 }
-
-export default WorkListItem
