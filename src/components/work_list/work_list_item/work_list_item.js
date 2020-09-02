@@ -9,8 +9,6 @@ export default class WorkListItem extends Component {
 
 
     render() {
-
-
         const {work} = this.props
 
         return (

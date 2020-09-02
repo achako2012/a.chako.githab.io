@@ -17,7 +17,7 @@ export default class CvService {
     }
 
     getSkills() {
-        return this.getResource(`/skills/`)
+        return this.getResource(`/skill/`)
     }
 
 }

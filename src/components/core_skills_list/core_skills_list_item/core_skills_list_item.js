@@ -1,13 +1,19 @@
-import React from "react";
+import React, {Component} from "react";
 
-const CoreSkillsItem = ({label}) => {
-    return (
+export default class CoreSkillsItem extends Component {
+    constructor(props) {
+        super(props)
+    }
+
+    render() {
+        const {skill} = this.props
+
+        return (
             <div className="app-list-item d-flex justify-content-between">
                 <span className="app-list-item-label">
-                    {label}
+                    {skill}
                 </span>
             </div>
-    )
+        )
+    }
 }
-
-export default CoreSkillsItem
