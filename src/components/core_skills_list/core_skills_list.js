@@ -2,39 +2,45 @@ import React, {Component} from 'react';
 
 import CoreSkillsItem from './core_skills_list_item'
 import CvService from "../../services/CvService";
-import WorkListItem from "../work_list/work_list_item";
+import Spinner from "../spinner";
 
 
-export default class CoreSkills extends Component{
-
-    constructor(){
-        super();
-        this.updateSkills()
-    }
+export default class CoreSkills extends Component {
 
     cvService = new CvService()
+
     state = {
-        skills:[]
+        skills: null
     }
 
-    updateSkills(){
+    componentDidMount() {
         this.cvService.getSkills()
-            .then(arr =>{
-                this.setState({skills: arr})})
+            .then(skills => {
+                this.setState({skills})
+            })
     }
 
-    render(){
-
-        const {skills} = this.state
-        const elements = skills.map((item) => {
-
-            const {id, ...skill} = item;
+    renderItems(skills) {
+        return skills.map((item) => {
+            const {id, ...skill} = item
             return (
                 <li key={id} className="list-group-item">
                     <CoreSkillsItem {...skill}/>
                 </li>
             )
         })
+    }
+
+    render() {
+
+        const {skills} = this.state
+
+        if(!skills) {
+            return <Spinner/>
+        }
+
+
+        const items = this.renderItems(skills)
 
         return (
             <div>
@@ -42,7 +48,7 @@ export default class CoreSkills extends Component{
                     Core Skills
                 </h1>
                 <ul className="list-group">
-                    {elements}
+                    {items}
                 </ul>
             </div>
         )
