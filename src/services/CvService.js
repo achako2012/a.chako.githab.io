@@ -1,27 +1,26 @@
 export default class CvService {
-    constructor(){
+    constructor() {
         this._apiBase = 'http://localhost:8092';
     }
 
-    async getResource(url) {
+    getResource = async (url) => {
         const res = await fetch(`${this._apiBase}${url}`)
-        if(!res.ok) {
+        if (!res.ok) {
             throw new Error(`Could not fetch ${url}` +
-            `, received ${res.status}`);
+                `, received ${res.status}`);
         }
         return await res.json();
     }
 
-    getWork() {
+    getWork = async () => {
         return this.getResource(`/work/`);
     }
 
-    getSkills() {
+    getSkills = async () => {
         return this.getResource(`/skill/`)
     }
 
-    getTrainings() {
+    getTrainings = async () => {
         return this.getResource(`/training/`)
     }
-
 }

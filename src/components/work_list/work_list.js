@@ -9,21 +9,20 @@ import Spinner from "../spinner";
 
 export default class WorkList extends Component {
 
-   cvService = new CvService()
-
     state = {
-       works:null
+       itemList:null
     }
 
     componentDidMount() {
-       this.cvService.getWork()
-           .then(works => {
-               this.setState({works})
-           })
+        const {getData} = this.props
+        getData()
+            .then(itemList => {
+                this.setState({itemList})
+            })
     }
 
-    renderItems(works) {
-       return works.map((item) => {
+    renderItems(arr) {
+       return arr.map((item) => {
            const {id, ...work} = item
            return (
                <li key={id} className="list-group-item">
@@ -36,13 +35,13 @@ export default class WorkList extends Component {
 
     render() {
 
-        const {works} = this.state
+        const {itemList} = this.state
 
-        if(!works) {
+        if(!itemList) {
             return <Spinner/>
         }
 
-        const items = this.renderItems(works)
+        const items = this.renderItems(itemList)
 
         return (
             <div>

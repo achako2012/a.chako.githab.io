@@ -7,21 +7,20 @@ import Spinner from "../spinner";
 
 export default class CoreSkills extends Component {
 
-    cvService = new CvService()
-
     state = {
-        skills: null
+        itemList: null
     }
 
     componentDidMount() {
-        this.cvService.getSkills()
-            .then(skills => {
-                this.setState({skills})
+        const {getData} = this.props
+        getData()
+            .then(itemList => {
+                this.setState({itemList})
             })
     }
 
-    renderItems(skills) {
-        return skills.map((item) => {
+    renderItems(arr) {
+        return arr.map((item) => {
             const {id, ...skill} = item
             return (
                 <li key={id} className="list-group-item">
@@ -33,14 +32,14 @@ export default class CoreSkills extends Component {
 
     render() {
 
-        const {skills} = this.state
+        const {itemList} = this.state
 
-        if(!skills) {
+        if(!itemList) {
             return <Spinner/>
         }
 
 
-        const items = this.renderItems(skills)
+        const items = this.renderItems(itemList)
 
         return (
             <div>

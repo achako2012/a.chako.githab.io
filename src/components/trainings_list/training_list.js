@@ -1,31 +1,29 @@
 import React, {Component} from 'react';
 
-import TrainingListItem from "./training_list_item";
-import CvService from "../../services/CvService";
 import Spinner from "../spinner";
-
 
 export default class TrainingList extends Component {
 
-    cvService = new CvService()
-
     state = {
-        trainings:null
+        itemList:null
     }
 
     componentDidMount() {
-        this.cvService.getTrainings()
-            .then(trainings => {
-                this.setState({trainings})
+        const {getData} = this.props
+        getData()
+            .then(itemList => {
+                this.setState({itemList})
             })
     }
 
-    renderItems(trainings) {
-        return trainings.map((item) => {
-            const {id, ...training} = item
+    //Render Function Pattern
+    renderItems(arr) {
+        return arr.map((item) => {
+            const {id} = item
+            const training = this.props.renderItem(item)
             return (
                 <li key={id} className="list-group-item">
-                    <TrainingListItem {...training}/>
+                    {training}
                 </li>
             )
         })
@@ -33,13 +31,13 @@ export default class TrainingList extends Component {
 
     render(){
 
-        const {trainings} = this.state
+        const {itemList} = this.state
 
-        if (!trainings) {
+        if (!itemList) {
             return <Spinner/>
         }
 
-        const items = this.renderItems(trainings)
+        const items = this.renderItems(itemList)
 
         return (
             <div>
