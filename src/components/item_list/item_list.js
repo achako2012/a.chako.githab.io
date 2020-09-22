@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 
-import CoreSkillsItem from './core_skills_list_item'
-import CvService from "../../services/CvService";
 import Spinner from "../spinner";
 
-
-export default class CoreSkills extends Component {
+//Main class to render any list of elements
+export default class ItemList extends Component {
 
     state = {
-        itemList: null
+        itemList:null
     }
 
+    //Function pattern
     componentDidMount() {
+        //I catch setUP for HTTP request from app.js and set value to state
         const {getData} = this.props
         getData()
             .then(itemList => {
@@ -19,32 +19,34 @@ export default class CoreSkills extends Component {
             })
     }
 
+    //Render Function Pattern
     renderItems(arr) {
+        //I catch in props what exactly variables will be show in list
         return arr.map((item) => {
-            const {id, ...skill} = item
+            const {id} = item
+            const content = this.props.renderItem(item)
             return (
                 <li key={id} className="list-group-item">
-                    <CoreSkillsItem {...skill}/>
+                    {content}
                 </li>
             )
         })
     }
 
-    render() {
+    render(){
 
         const {itemList} = this.state
 
-        if(!itemList) {
+        if (!itemList) {
             return <Spinner/>
         }
-
 
         const items = this.renderItems(itemList)
 
         return (
             <div>
                 <h1 className="app-list">
-                    Core Skills
+                    {this.props.label}
                 </h1>
                 <ul className="list-group">
                     {items}

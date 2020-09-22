@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import WorkListItem from './work_list_item'
 import './work_list.css'
-import CvService from "../../services/CvService";
 import Spinner from "../spinner";
 
 
@@ -13,6 +12,7 @@ export default class WorkList extends Component {
        itemList:null
     }
 
+    //Function pattern
     componentDidMount() {
         const {getData} = this.props
         getData()
@@ -25,13 +25,13 @@ export default class WorkList extends Component {
        return arr.map((item) => {
            const {id, ...work} = item
            return (
+               //Pattern #1, I use additional custom component to render work
                <li key={id} className="list-group-item">
                    <WorkListItem {...work}/>
                </li>
            )
        })
     }
-
 
     render() {
 

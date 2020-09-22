@@ -2,12 +2,10 @@ import React, {Component} from 'react'
 import AppHeader from "../app_header";
 import WorkList from "../work_list";
 import Objective from "../objective";
-import CoreSkills from "../core_skills_list";
-import TrainingList from "../trainings_list";
 import Education from "../education";
 import Interests from "../interests";
 import Languages from "../languages";
-
+import ItemList from "../item_list";
 import './app.css'
 import CvService from "../../services/CvService";
 
@@ -30,12 +28,18 @@ export default class App extends Component {
             <div className="app">
                 <AppHeader/>
                 <Objective label={objective}/>
-                <CoreSkills getData={this.cvService.getSkills}/>
-                {/*Render Function pattern*/}
-                <TrainingList
-                    getData={this.cvService.getTrainings}
-                    renderTraining={({school, training}) => `${school} - ${training}`}/>
+                {/*Function pattern*/}
+                <ItemList label={'Core Skills'}
+                          getData={this.cvService.getSkills}
+                          // Render Function pattern
+                          renderItem={({skill}) => `${skill}`}/>
+                {/*Function pattern*/}
+                <ItemList label={'Training List'}
+                          getData={this.cvService.getTrainings}
+                          // Render Function pattern
+                          renderItem={({school, training}) => `${school} - ${training}`}/>
                 <Education {...education}/>
+                {/*Function pattern*/}
                 <WorkList getData={this.cvService.getWork}/>
                 <Interests interests={interests}/>
                 <Languages/>

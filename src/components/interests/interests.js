@@ -8,9 +8,11 @@ const Interests = ({interests}) => {
             <h1 className="app-list">
                 Interests
             </h1>
-            <p>
-                {interests}
-            </p>
+            <div className="list-group">
+                <p className="list-group-item">
+                    {interests}
+                </p>
+            </div>
         </>
     )
 }

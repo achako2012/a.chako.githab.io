@@ -9,11 +9,11 @@ const Languages = () => {
             <h1 className='app-list'>
                 Languages
             </h1>
-            <ul>
-                <li>
+            <ul className="list-group">
+                <li className="list-group-item">
                     Russsian, Ukraine - native
                 </li>
-                <li>
+                <li className="list-group-item">
                     English - Intermediate
                 </li>
             </ul>
