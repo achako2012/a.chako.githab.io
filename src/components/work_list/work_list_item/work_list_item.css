@@ -8,6 +8,7 @@
     cursor: pointer;
     user-select: none;
     transition: 0.5s all;
+    font-size: 1rem;
 }
 
 

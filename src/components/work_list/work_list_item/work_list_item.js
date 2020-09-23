@@ -3,9 +3,6 @@ import React, {Component} from "react";
 import './work_list_item.css'
 
 export default class WorkListItem extends Component {
-    constructor(props) {
-        super(props)
-    }
 
     renderItems(arr) {
         return arr.map((item) => {

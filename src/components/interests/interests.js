@@ -3,6 +3,7 @@ import React from 'react'
 import './interests.css'
 
 const Interests = ({interests}) => {
+
     return (
         <>
             <h1 className="app-list">

@@ -34,13 +34,13 @@ export default class App extends Component {
                           // Render Function pattern
                           renderItem={({skill}) => `${skill}`}/>
                 {/*Function pattern*/}
-                <ItemList label={'Training List'}
-                          getData={this.cvService.getTrainings}
-                          // Render Function pattern
-                          renderItem={({school, training}) => `${school} - ${training}`}/>
+                <WorkList getData={this.cvService.getWork}/>
                 <Education {...education}/>
                 {/*Function pattern*/}
-                <WorkList getData={this.cvService.getWork}/>
+                <ItemList label={'Trainings'}
+                          getData={this.cvService.getTrainings}
+                    // Render Function pattern
+                          renderItem={({school, training}) => `${school} - ${training}`}/>
                 <Interests interests={interests}/>
                 <Languages/>
             </div>
