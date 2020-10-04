@@ -5,39 +5,37 @@ import './work_list.css'
 import Spinner from "../spinner";
 
 
-
 export default class WorkList extends Component {
 
     state = {
-       itemList:null
+        itemList: null
     }
 
-    //Function pattern
     componentDidMount() {
         const {getData} = this.props
-        getData()
-            .then(itemList => {
-                this.setState({itemList})
-            })
+        this.itemList = getData;
+        this.setState({
+            itemList: this.itemList
+        });
     }
 
     renderItems(arr) {
-       return arr.map((item) => {
-           const {id, ...work} = item
-           return (
-               //Pattern #1, I use additional custom component to render work
-               <li key={id} className="list-group-item">
-                   <WorkListItem {...work}/>
-               </li>
-           )
-       })
+        return arr.map((item) => {
+            const {id, ...work} = item
+            return (
+                //Pattern #1, I use additional custom component to render work
+                <li key={id} className="list-group-item">
+                    <WorkListItem {...work}/>
+                </li>
+            )
+        })
     }
 
     render() {
 
         const {itemList} = this.state
 
-        if(!itemList) {
+        if (!itemList) {
             return <Spinner/>
         }
 

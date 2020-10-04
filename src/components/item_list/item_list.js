@@ -11,12 +11,11 @@ export default class ItemList extends Component {
 
     //Function pattern
     componentDidMount() {
-        //I catch setUP for HTTP request from app.js and set value to state
         const {getData} = this.props
-        getData()
-            .then(itemList => {
-                this.setState({itemList})
-            })
+        this.itemList = getData;
+        this.setState({
+            itemList: this.itemList
+        });
     }
 
     //Render Function Pattern
