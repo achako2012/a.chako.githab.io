@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './languages.css'
+import './cv.css'
 
 const Languages = () => {
 

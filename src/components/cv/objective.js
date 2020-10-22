@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './objective.css'
+import './cv.css'
 
 const Objective = ({label}) => {
 

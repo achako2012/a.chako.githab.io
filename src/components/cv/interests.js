@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './interests.css'
+import './cv.css'
 
 const Interests = ({interests}) => {
 

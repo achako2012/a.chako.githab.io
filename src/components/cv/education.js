@@ -1,6 +1,6 @@
 import React from "react";
 
-import './education.css'
+import './cv.css'
 
 const Education = ({university, faculty}) => {
 
