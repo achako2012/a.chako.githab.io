@@ -2,6 +2,7 @@
     display: inline-flex;
     /*align-items: flex-end;*/
     justify-content: space-between;
+    margin-top: 30px;
 }
 
 .app_header img {

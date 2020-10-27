@@ -23,7 +23,6 @@ export default class WorkList extends Component {
         return arr.map((item) => {
             const {id, ...work} = item
             return (
-                //Pattern #1, I use additional custom component to render work
                 <li key={id} className="list-group-item">
                     <WorkListItem {...work}/>
                 </li>

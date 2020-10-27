@@ -5,16 +5,18 @@ import {Objective, Education, Interests, Languages} from "../cv";
 import ItemList from "../item_list";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './app.css'
+import About from "../about/about";
+import Header from "../header/header";
 
 const config = require('../../server_imulation/config')
 
 export default class App extends Component {
 
-
     render() {
 
         return (
             <Router>
+                <Header/>
                 <div className="app">
                     <Route path='/cv'>
                         <AppHeader/>
@@ -31,7 +33,7 @@ export default class App extends Component {
                         <Languages/>
                     </Route>
                     <Route path='/about'>
-                        <h1>About Me here</h1>
+                        <About/>
                     </Route>
                     <Route path='/blog'>
                         <h1>Blog here</h1>
