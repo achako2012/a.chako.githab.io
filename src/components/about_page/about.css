@@ -35,6 +35,15 @@
     display: block;
     float: left;
     margin: 0;
+    width: 100%;
+}
+
+.skills-label {
+    text-align: right;
+    margin-bottom: 0.5em;
+    font-size: 28px;
+    line-height: 1.2em;
+    font-weight: normal;
 }
 
 .bar-chart{
@@ -45,19 +54,108 @@
     margin: 0px;
 }
 .bar-chart li{
+    width: 16%;
     margin: 0 2% 0 0;
     display: inline-block;
+    text-align: center;
+    position: relative;
+    vertical-align: bottom;
+    color: #FFF;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border: #BBB solid 1px;
+
 }
-.bar-chart li.axis{
+.bar-chart li.axis {
     width: 8%;
     border: 0;
     border-right: #DDD solid 1px;
     height: 450px;
-    background: #fafafa;
+    border-radius: 0px;
 }
 
 .bar-chart .label {
-    font-size: 16px;
-    font-size: 1.6rem;
+    font-size: 14px;
     margin: -0.6em 0 92px 0;
+    color: #666666;
+}
+
+.bar-chart .aqua{
+    visibility: visible;
+    height: 90%;
+    opacity: 1;
+    border-color: #8dc5be;
+    background-color: #b0dbd6;
+}
+
+.bar-chart .pink{
+    visibility: visible;
+    height: 80%;
+    opacity: 1;
+    border-color: #ebc0b5;
+    background-color: #ebc0b5;
+}
+
+.bar-chart .yellow{
+    visibility: visible;
+    height: 90%;
+    opacity: 1;
+    border-color: #e7af30;
+    background-color: #e7af30;
+}
+
+.bar-chart .brown{
+    visibility: visible;
+    height: 65%;
+    opacity: 1;
+    border-color: #dcb386;
+    background-color: #dcb386;
+}
+
+.bar-chart .red{
+    visibility: visible;
+    height: 40%;
+    opacity: 1;
+    border-color: #e14949;
+    background-color: #e14949;
+}
+
+.bar-chart .percent{
+    font-size: 50px;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    line-height: 1em;
+}
+.bar-chart .percent span {
+    font-size: 2.4rem;
+    padding-left: 3px;
+}
+
+.bar-chart .skill {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.professional-skills, .my-skills{
+    display: flex;
+}
+
+.service-item{
+    width: 33%;
+    font-size: 100%;
+}
+
+.service-item span{
+   padding: 0 25%;
+
+
+}
+
+.react-icons{
+    font-size: 4em;
+    text-align: center;
 }

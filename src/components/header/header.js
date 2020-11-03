@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import {Link} from "react-router-dom";
-import {FaLinkedinIn} from "react-icons/fa";
+import {FaLinkedinIn, FaTelegramPlane} from "react-icons/fa";
 import {IconContext} from "react-icons";
 import { VscGithub } from "react-icons/vsc";
 
@@ -26,6 +26,9 @@ const Header = () => {
                         </a>
                         <a href="https://github.com/achako2012?tab=repositories">
                             <VscGithub/>
+                        </a>
+                        <a href="https://telegram.me/AleksandrChako">
+                            <FaTelegramPlane/>
                         </a>
                     </IconContext.Provider>
                 </div>

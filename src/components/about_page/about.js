@@ -1,5 +1,13 @@
 import React, {Component} from "react";
 
+
+import {RiStockFill, RiComputerFill} from "react-icons/ri";
+import {IconContext} from "react-icons";
+import {BiDonateBlood} from "react-icons/bi";
+import {GiJourney, GiComputing, GiBigGear} from "react-icons/gi";
+import {FaGamepad} from "react-icons/fa";
+
+
 import './about.css'
 
 export default class About extends Component {
@@ -34,7 +42,7 @@ export default class About extends Component {
                     <section id="bar-chart">
                         <div className="row">
                             <div className="columns">
-                                <h2>My Skills</h2>
+                                <h2 className="skills-label">My Skills</h2>
                                 <ul className="bar-chart">
                                     <li className="axis">
                                         <div className="label">Jedi</div>
@@ -42,27 +50,117 @@ export default class About extends Component {
                                         <div className="label">Geek</div>
                                         <div className="label">Budgie</div>
                                     </li>
-                                    <li className="">
-                                        <div className="percent">"95"<span>%</span></div>
-                                        <div className="skill">Coffe drinking</div>
+                                    <li className="aqua">
+                                        <div className="percent">90<span>%</span></div>
+                                        <div className="skill">Coffee drinking</div>
                                     </li>
-                                    <li className="">
-                                        <div className="percent">"95"<span>%</span></div>
+                                    <li className="pink">
+                                        <div className="percent">80<span>%</span></div>
                                         <div className="skill">Testing</div>
                                     </li>
-                                    <li className="">
-                                        <div className="percent">"95"<span>%</span></div>
+                                    <li className="yellow">
+                                        <div className="percent">90<span>%</span></div>
                                         <div className="skill">Learning</div>
                                     </li>
-                                    <li className="">
-                                        <div className="percent">"95"<span>%</span></div>
-                                        <div className="skill">Walking</div>
+                                    <li className="brown">
+                                        <div className="percent">65<span>%</span></div>
+                                        <div className="skill">Eating pizza</div>
                                     </li>
-                                    <li className="">
-                                        <div className="percent">"95"<span>%</span></div>
+                                    <li className="red">
+                                        <div className="percent">40<span>%</span></div>
                                         <div className="skill">Coding</div>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="service-items">
+                        <div className="professional-skills">
+                            <div className="service-item">
+                            <span>
+                                <IconContext.Provider value={{ className: 'react-icons' }}>
+                            <GiBigGear/>
+                             </IconContext.Provider>
+                            </span>
+                                <h3>
+                                    Test Automation
+                                </h3>
+                                <p>
+                                    Some text here
+                                </p>
+
+                            </div>
+                            <div className="service-item">
+                            <span>
+                                <IconContext.Provider value={{ className: 'react-icons' }}>
+                            <RiComputerFill/>
+                             </IconContext.Provider>
+                            </span>
+                                <h3>
+                                    Manual Testing
+                                </h3>
+                                <p>
+                                    Some text here
+                                </p>
+
+                            </div>
+                            <div className="service-item">
+                            <span>
+                                <IconContext.Provider value={{ className: 'react-icons' }}>
+                            <GiComputing/>
+                             </IconContext.Provider>
+                            </span>
+                                <h3>
+                                    Learning
+                                </h3>
+                                <p>
+                                    Some text here
+                                </p>
+
+                            </div>
+                        </div>
+                        <div className="my-skills">
+                            <div className="service-item">
+                            <span>
+                                <IconContext.Provider value={{ className: 'react-icons' }}>
+                            <FaGamepad/>
+                             </IconContext.Provider>
+                            </span>
+                                <h3>
+                                    Gaming
+                                </h3>
+                                <p>
+                                    Some text here
+                                </p>
+
+                            </div>
+                            <div className="service-item">
+                            <span>
+                                <IconContext.Provider value={{ className: 'react-icons' }}>
+                            <GiJourney/>
+                             </IconContext.Provider>
+                            </span>
+                                <h3>
+                                    Traveling
+                                </h3>
+                                <p>
+                                    Some text here
+                                </p>
+
+                            </div>
+                            <div className="service-item">
+                            <span>
+                                <IconContext.Provider value={{ className: 'react-icons' }}>
+                            <BiDonateBlood/>
+                             </IconContext.Provider>
+                            </span>
+                                <h3>
+                                    Volunteering
+                                </h3>
+                                <p>
+                                    Some text here
+                                </p>
+
                             </div>
                         </div>
                     </section>
