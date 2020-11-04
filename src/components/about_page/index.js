@@ -1,2 +1,5 @@
 import About from './about'
-export default About
+import Chart from './chart'
+import Service from './service'
+
+export default {About, Chart, Service}

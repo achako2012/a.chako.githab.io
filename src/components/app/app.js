@@ -5,6 +5,8 @@ import ItemList from "../item_list";
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './app.css'
 import About from "../about_page/about";
+import Service from "../about_page/service";
+import Chart from "../about_page/chart";
 import Header from "../header/header";
 
 const config = require('../../server_imulation/config')
@@ -33,6 +35,8 @@ export default class App extends Component {
                     </Route>
                     <Route path='/about'>
                         <About/>
+                        <Service/>
+                        <Chart/>
                     </Route>
                     <Route path='/blog'>
                         <h1>Blog here</h1>

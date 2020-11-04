@@ -1,34 +1,51 @@
+section{
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
 .row {
     clear: both;
     max-width: 1040px;
     margin: 0 auto;
-    padding: 3em 5%;
 }
 
 #text-main {
     float: left;
-    margin:0 3.84615385% 0 0;
+    margin: 0 3.84615385% 0 0;
     width: 39.42307692%;
     padding-top: 1.5em;
 }
-
-#img-main {
-    float:left;
-    width: 56.73076923%;
+#text-main h1, #text-main p{
+    text-align: left;
 }
 
-.snaps{
+.intro {
+    line-height: 1.3em;
+    margin-bottom: 0.7em;
+}
+
+#img-main {
+    display: block;
+    text-align: center;
+    width: 56.73076923%;
+}
+#img-main img{
+    border-radius: 100%;
+    width: 250px;
+}
+
+.snaps {
+    padding-top: 25px;
     max-width: 1024px;
     margin: 0 auto;
 }
 
-.snaps img{
+.snaps img {
     display: inline-block;
     margin-right: 1.9%;
     width: 140px;
     height: 125px;
     border-radius: 3px;
-    /*margin: 2% 1% 2% 0;*/
 }
 
 .columns {
@@ -46,14 +63,15 @@
     font-weight: normal;
 }
 
-.bar-chart{
+.bar-chart {
     list-style: none;
     height: 450px;
     position: relative;
     padding: 0;
     margin: 0px;
 }
-.bar-chart li{
+
+.bar-chart li {
     width: 16%;
     margin: 0 2% 0 0;
     display: inline-block;
@@ -66,6 +84,7 @@
     border: #BBB solid 1px;
 
 }
+
 .bar-chart li.axis {
     width: 8%;
     border: 0;
@@ -80,7 +99,7 @@
     color: #666666;
 }
 
-.bar-chart .aqua{
+.bar-chart .aqua {
     visibility: visible;
     height: 90%;
     opacity: 1;
@@ -88,7 +107,7 @@
     background-color: #b0dbd6;
 }
 
-.bar-chart .pink{
+.bar-chart .pink {
     visibility: visible;
     height: 80%;
     opacity: 1;
@@ -96,7 +115,7 @@
     background-color: #ebc0b5;
 }
 
-.bar-chart .yellow{
+.bar-chart .yellow {
     visibility: visible;
     height: 90%;
     opacity: 1;
@@ -104,7 +123,7 @@
     background-color: #e7af30;
 }
 
-.bar-chart .brown{
+.bar-chart .brown {
     visibility: visible;
     height: 65%;
     opacity: 1;
@@ -112,7 +131,7 @@
     background-color: #dcb386;
 }
 
-.bar-chart .red{
+.bar-chart .red {
     visibility: visible;
     height: 40%;
     opacity: 1;
@@ -120,7 +139,7 @@
     background-color: #e14949;
 }
 
-.bar-chart .percent{
+.bar-chart .percent {
     font-size: 50px;
     opacity: 0.3;
     position: absolute;
@@ -128,6 +147,7 @@
     width: 100%;
     line-height: 1em;
 }
+
 .bar-chart .percent span {
     font-size: 2.4rem;
     padding-left: 3px;
@@ -140,22 +160,21 @@
     font-size: 12px;
 }
 
-.professional-skills, .my-skills{
+.professional-skills, .my-skills {
     display: flex;
 }
 
-.service-item{
+.service-item {
     width: 33%;
     font-size: 100%;
 }
 
-.service-item span{
-   padding: 0 25%;
-
-
+.service-item span, .service-item h3, .service-item p {
+    display: block;
+    text-align: center;
 }
 
-.react-icons{
-    font-size: 4em;
+.react-icons {
+    font-size: 5em;
     text-align: center;
 }
